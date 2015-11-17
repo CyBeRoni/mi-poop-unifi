@@ -61,6 +61,6 @@ Example JSON
       "customer_metadata": {
         "system:ssh_disabled": "true",
         "system:timezone": "Europe/Amsterdam",
-	"unifi:version": "4.7.6"
+        "unifi:version": "4.7.6"
       }
     }
