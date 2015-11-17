@@ -1,0 +1,30 @@
+<?xml version='1.0'?>
+<!DOCTYPE service_bundle SYSTEM '/usr/share/lib/xml/dtd/service_bundle.dtd.1'>
+<service_bundle type='manifest' name='export'>
+  <service name='network/unifi' type='service' version='0'>
+    <create_default_instance enabled='true'/>
+    <single_instance/>
+    <dependency name='Network' grouping='require_all' restart_on='none' type='service'>
+      <service_fmri value='svc:/milestone/network:default'/>
+    </dependency>
+    <exec_method name='start' type='method' exec='/opt/local/bin/java -jar /opt/local/UniFi/lib/ace.jar start'
+        timeout_seconds="60">
+	<method_context>
+	    <method_credential user='unifi' group="nogroup"/>
+        </method_context>
+    </exec_method>
+    <exec_method name='stop' type='method' exec=':kill' timeout_seconds='60'/>
+    <property_group name='startd' type='framework'>
+	<propval name='duration' type='astring' value='child' />
+    </property_group>
+    <stability value='Unstable'/>
+    <template>
+      <common_name>
+        <loctext xml:lang='C'>UniFi Controller</loctext>
+      </common_name>
+      <documentation>
+        <doc_link name='homepage' uri='https://www.ubnt.com/enterprise/'/>
+      </documentation>
+    </template>
+  </service>
+</service_bundle>
