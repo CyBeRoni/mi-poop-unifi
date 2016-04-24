@@ -3,7 +3,7 @@ mi-poop-unifi
 
 Please refer to https://github.com/joyent/mibe for use of this repo.
 
-Use with base-64 image from Joyent; tested with 15.3.0.
+Use with base-64 image from Joyent; tested with 15.4.1.
 
 When built, this image provides the Ubiquiti UniFi controller webapp.
 
@@ -13,7 +13,9 @@ The following customer_metadata is used:
 
 * system:ssh_disabled - Whether or not to disable the ssh daemon (default: false)
 * system:timezone - What timezone to use (no default)
-* unifi:version - What version of UniFi to install (default: 4.7.6)
+* unifi:version - What version of UniFi to install (default: 4.8.15)
+
+Note that ubiqiti is rather automation-unfriendly in that they remove old versions -- you may need to set unifi:version to the current release rather than rely on the default.
 
 Services
 --------

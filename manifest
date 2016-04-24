@@ -1,7 +1,7 @@
 name="poop-unifi"
 organization="Joyent"
 brand="Instance"
-version="15.3.0"
+version="15.4.1-1"
 description="UniFi Controller on SmartOS"
 homepage="http://www.poop.nl/"
 users="root"

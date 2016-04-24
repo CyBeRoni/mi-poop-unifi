@@ -1,4 +1,5 @@
 # List packages to add to your image one per line.
 unzip
-sun-jre6-6.0.26
+openjdk7
 mongodb
+rsyslog
