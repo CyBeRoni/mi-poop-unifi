@@ -1,4 +1,9 @@
 # Changelog for mi-poop-unifi
 
+poop-unifi-15.4.1-2
+* Update to unifi controller 4.8.15
+* Use OpenJDK 7 instead of Sun JRE 6
+
+
 poop-unifi-15.3.0
 * Initial.
